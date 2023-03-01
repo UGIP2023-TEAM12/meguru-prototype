@@ -1,0 +1,3 @@
+[submodule "image-recognition-train/yolov5"]
+	path = image-recognition-train/yolov5
+	url = git@github.com:ultralytics/yolov5.git

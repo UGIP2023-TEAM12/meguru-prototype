@@ -1,0 +1,8 @@
+train: data/objects/train/images # 学習の画像のパス
+val: data/objects/valid/images # 検証用画像のパス
+val: data/objects/test/images
+
+names:
+  0: luggage case
+  1: baby carriage
+  2: wheelchair

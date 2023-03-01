@@ -57,7 +57,7 @@ if __name__ == "__main__":
         "-mn",
         "--weight_nm",
         help="Choose weight name for inference",
-        default="yolov5s_additional_train_datahub_objects.pt",
+        default="yolov5s.pt",
     )
     parser.add_argument(
         "-ui",

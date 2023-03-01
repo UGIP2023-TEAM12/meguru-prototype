@@ -1,6 +1,8 @@
 # beacon-receiver
 
-ブラウザ上で本体のBluetoothを利用できる技術である，[Web Bluetooth](https://github.com/WebBluetoothCG/web-bluetooth)を用いて，周囲のBLEアドバタイズをスキャンするWebアプリケーションの実装
+本リポジトリは，我々のサービス meguru において，発信されたビーコンを受信するアプリケーションをプロトタイプとして実装したものである．
+
+ここでは一例として，ブラウザ上でハードウェア本体のBluetoothを利用できる技術である，[Web Bluetooth](https://github.com/WebBluetoothCG/web-bluetooth)を用いて，周囲のBLEアドバタイズをスキャンするWebアプリケーションを実装した．
 
 
 ## requirements
@@ -27,7 +29,7 @@ Access "localhost:8000" in Chrome.
 
 Accsess [here](https://ble-receiver.onrender.com)
 
-## Usage
+## Website
 - /
     - 動作確認
 

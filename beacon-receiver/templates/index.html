@@ -1,0 +1,72 @@
+<!-- "chrome://flags/#enable-experimental-web-platform-features">please enable this -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+</head>
+
+<body class="position-absolute">
+    <img src="{{ url_for('static', path='/figs/loading.gif') }}" style="display:none;" id="beacon_gif">
+    <br><br>
+    <ons-button id="turnOn">SCAN START</ons-button>
+</body>
+
+<script>
+    let deviceId = "{{ id }}";
+
+    function push(body){
+        Push.create("ble-receiver",
+        {
+            body: body,
+            timeout: 8000,
+            onClick: function () {
+            window.focus();
+            this.close();
+            }
+        })
+    }
+
+    function startDeviceScanner(deviceId) {
+
+    navigator.bluetooth.requestLEScan({
+    acceptAllAdvertisements: true,
+    keepRepeatedDevices: true,
+    })
+    .then(scanner => {
+
+        console.log(scanner);
+
+        navigator.bluetooth.addEventListener("advertisementreceived", (event) => {
+
+            console.log(event.device.name, event.device.id);
+
+            if (event.device.name == deviceId) {
+                alert("You Got It!");
+            }
+        }
+    );
+
+    })
+    .catch(error => { console.log(error); });
+
+    };
+
+    let turnOnButton = document.getElementById("turnOn");
+    let beacon_gif = document.getElementById("beacon_gif");
+
+    turnOnButton.addEventListener("click",() => {
+        console.log("scan start");
+        console.log(deviceId);
+
+        startDeviceScanner(deviceId);
+
+        turnOnButton.style.display = "none";
+        beacon_gif.style.display = "block";
+
+    });
+</script>
+</html>

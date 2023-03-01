@@ -1,0 +1,12 @@
+.position-absolute{
+    position: absolute;  /*要素を浮かす*/
+    /*relativeを指定した親要素を支点とした位置をすべて0に指定↓*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; /*上下左右中央に*/
+    width: 100px; /*widthの指定は必須*/
+    height: 100px; /*heightの指定は必須*/
+    transform: scale(2.5, 2.5);
+}

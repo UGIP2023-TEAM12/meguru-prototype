@@ -1,4 +1,4 @@
-# ビーコンのプロトタイプ: YOLOで物体検出し，BLEを発信
+# IoTデバイスのプロトタイプ: YOLOで物体検出し，BLEを発信
 <img src="https://user-images.githubusercontent.com/88654010/222055330-ec3cc10c-34d2-491b-be61-d2f5394c4043.jpg" width="30%">
 
 ## 概要

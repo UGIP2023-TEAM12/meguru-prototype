@@ -23,7 +23,7 @@
 実際に画像認識モデルを導入し，カメラで撮影する画像データを用いて，新たに画像認識モデルを学習したり，学習済みモデルに追加で学習を行って精度を向上させたりするスキームのプロトタイプとして実装したもの．
 
 一例として，[YOLOv5](https://github.com/ultralytics/yolov5)と転移学習を使い，固定カメラに映るベビーカー・スーツケース・車椅子を検知する．
-[COCO128](https://cocodataset.org/)で学習済みのYOLOモデルの重みを初期値として，[Axross Recipe](https://axross-recipe.com/biz) DataHub (©SoftBank Corp.) 経由で提供された「[監視シーン下の物体識別データ](https://datahub.axross-recipe.com/datasets/2)」 (©Datatang Inc. ) を用いて追加で学習を実行した．．
+[COCO128](https://cocodataset.org/)で学習済みのYOLOモデルの重みを初期値として，[Axross Recipe](https://axross-recipe.com/biz) DataHub (©SoftBank Corp.) 経由で提供された「[監視シーン下の物体識別データ](https://datahub.axross-recipe.com/datasets/2)」 (©Datatang Inc. ) を用いて追加で学習を実行した．
 
 ## beacon-sender
 

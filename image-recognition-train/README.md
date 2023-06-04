@@ -5,9 +5,6 @@
 本リポジトリでは一例として，[YOLOv5](https://github.com/ultralytics/yolov5)と転移学習を使って，固定カメラに映るベビーカー・スーツケース・車椅子を検知します．
 [COCO128](https://cocodataset.org/)で学習済みのYOLOモデルの重みを初期値として，[Axross Recipe](https://axross-recipe.com/biz) DataHub (©SoftBank Corp.) 経由で提供された「[監視シーン下の物体識別データ](https://datahub.axross-recipe.com/datasets/2)」 (©Datatang Inc. ) を用いて追加で学習を実行します．
 
-学習結果は [training_result_object_in_scene/ ](./training_result_object_in_scene/) に格納しています．
-
-学習済みの重みは [weights/yolov5s_additional_train_datahub_objects.pt ](./weights/yolov5s_additional_train_datahub_objects.pt)です．
 
 
 ## Requirements
@@ -19,6 +16,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Directory structure
+※一部のデータや学習済みの重みは削除済み．
 
 ```
 .
